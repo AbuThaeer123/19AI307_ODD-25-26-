@@ -1,36 +1,36 @@
-# Ex.No:2(B) METHODS
+# Ex.No:1(B) CONDITIONAL STATEMENT
 
 ## QUESTION:
-Define a class Car with brand (String), color (String), and year (int). Create 2 different objects of Car Assign values to attributes. Print the details of both cars.import java.util.Scanner;
+In a magical building, an elevator behaves oddly:
+
+If the floor number is divisible by 3 and 5, it says "Skipped".
+
+If the floor number is divisible by 3 only, it says "Beware!".
+
+If the floor number is divisible by 5 only, it says "Blessings!".
+
+Otherwise, it announces the floor number - print - "Floor {number}" .
+
+Write a Java program to simulate this elevator logic for a given floor number.
 
 ## AIM:
-To define a class Car with attributes brand, color, and year; create two objects of the class; assign values to their attributes; and print the details of both cars.
+To develop a Java program that checks a given floor number and displays a special message based on its divisibility by 3 and/or 5.
 
 ## ALGORITHM :
-Define a class Car with three data members:
+1.Start the program and read the floor number from the user.
 
-String brand String color int year and a method printDetails() to display these values.
+2.Check if the floor is divisible by both 3 and 5; if true, display "Skipped".
 
-In the main() method, create a Scanner object to read user inputs.
+3.Otherwise, check if the floor is divisible only by 3; if true, display "Beware!".
 
-Create the first object car1 and read its brand, color, and year from the user.
+4.Otherwise, check if the floor is divisible only by 5; if true, display "Blessings!".
 
-Create the second object car2 and read its brand, color, and year.
-
-Call printDetails() for car1 to display its information.
-
-Call printDetails() for car2 to display its information.
-
-7.Close the scanner and end the program.
-
-
-
-
+5.If none of the above conditions are met, display "Floor {floor number}", then stop the program.
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Methods using Java
+Program to implement a conditional statement using Java
 Developed by: MOHAMED ABUTHAEER K
 RegisterNumber:  212224020030
 */
@@ -40,48 +40,29 @@ RegisterNumber:  212224020030
 ```
 import java.util.Scanner;
 
-class Car {
-    String brand;
-    String color;
-    int year;
-
-    void printDetails() {
-        System.out.println("Brand: " + brand);
-        System.out.println("Color: " + color);
-        System.out.println("Year: " + year);
-    }
-}
-
-class prog {
+public class MagicalElevator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        
-        Car car1 = new Car();
-        car1.brand = scanner.nextLine();
-        car1.color = scanner.nextLine();
-        car1.year = scanner.nextInt();
-        scanner.nextLine();
+        int floor = scanner.nextInt();
 
-        
-        Car car2 = new Car();
-        car2.brand = scanner.nextLine();
-        car2.color = scanner.nextLine();
-        car2.year = scanner.nextInt();
-
-        car1.printDetails();
-        car2.printDetails();
+        if (floor % 3 == 0 && floor % 5 == 0) {
+            System.out.println("Skipped");
+        } else if (floor % 3 == 0) {
+            System.out.println("Beware!");
+        } else if (floor % 5 == 0) {
+            System.out.println("Blessings!");
+        } else {
+            System.out.println("Floor " + floor);
+        }
 
         scanner.close();
     }
 }
-
 ```
 
-
 ## OUTPUT:
-
-<img width="597" height="685" alt="image" src="https://github.com/user-attachments/assets/13cfec3a-777e-4d46-9531-38a748566619" />
+<img width="543" height="339" alt="image" src="https://github.com/user-attachments/assets/3963c4ce-4c5e-43d2-a641-848a70d34afc" />
 
 
 
